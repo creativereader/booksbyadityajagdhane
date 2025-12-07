@@ -1,0 +1,46 @@
+[
+  {
+    "slug": "the-creative-flow",
+    "title": "The Creative Flow: Mastering Music Production",
+    "shortTitle": "The Creative Flow",
+    "cover": "https://img-wrapper.vercel.app/image?url=https://placehold.co/600x900/252525/FFF?text=The+Creative+Flow",
+    "descriptionShort": "Unlock your potential in the studio with actionable strategies for modern producers.",
+    "tags": ["Music Production", "Creativity"],
+    "detailPage": "books/the-creative-flow.html",
+    "readLink": "#",
+    "publishedOn": "October 15, 2024"
+  },
+  {
+    "slug": "licensing-101",
+    "title": "Licensing 101: Get Your Music Heard",
+    "shortTitle": "Licensing 101",
+    "cover": "https://img-wrapper.vercel.app/image?url=https://placehold.co/600x900/1e3a8a/FFF?text=Licensing+101",
+    "descriptionShort": "A comprehensive guide to navigating the world of sync licensing and royalties.",
+    "tags": ["Music Business", "Licensing"],
+    "detailPage": "books/licensing-101.html",
+    "readLink": "#",
+    "publishedOn": "January 20, 2024"
+  },
+  {
+    "slug": "sound-design-secrets",
+    "title": "Sound Design Secrets",
+    "shortTitle": "Sound Design",
+    "cover": "https://img-wrapper.vercel.app/image?url=https://placehold.co/600x900/064e3b/FFF?text=Sound+Design",
+    "descriptionShort": "Craft unique sonic landscapes and define your signature sound.",
+    "tags": ["Sound Design", "Production"],
+    "detailPage": "books/sound-design-secrets.html",
+    "readLink": "#",
+    "publishedOn": "March 10, 2023"
+  },
+  {
+    "slug": "minimalist-musician",
+    "title": "The Minimalist Musician",
+    "shortTitle": "Minimalist Musician",
+    "cover": "https://img-wrapper.vercel.app/image?url=https://placehold.co/600x900/4c1d95/FFF?text=Minimalist",
+    "descriptionShort": "How to do more with less gear and focus on what truly matters.",
+    "tags": ["Lifestyle", "Creativity"],
+    "detailPage": "books/minimalist-musician.html",
+    "readLink": "#",
+    "publishedOn": "August 5, 2023"
+  }
+]
