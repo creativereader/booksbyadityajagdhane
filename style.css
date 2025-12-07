@@ -119,5 +119,15 @@ html[data-theme="dark"] .logo-dark {
     display: block;        /* removes extra bottom space */
 }
 
+.logo img {
+    height: 28px;          /* force identical height */
+    width: 28px;           /* force identical width */
+    display: block;
+    object-fit: contain;   /* removes padding differences */
+    margin: 0;
+    padding: 0;
+}
+
+
 
 
