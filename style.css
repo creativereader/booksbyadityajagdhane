@@ -107,3 +107,17 @@ html[data-theme="dark"] .logo-light {
 html[data-theme="dark"] .logo-dark {
     display: inline;
 }
+
+/* --- FIX LOGO ALIGNMENT --- */
+.logo {
+    display: flex;
+    align-items: center;   /* perfect vertical centering */
+    gap: 8px;              /* spacing between icon + text */
+}
+
+.logo img {
+    display: block;        /* removes extra bottom space */
+}
+
+
+
