@@ -93,4 +93,17 @@ root {
     button {
       background-color: #f9f9f9;
     }
+
   }
+
+/* Default: Light theme logo visible */
+.logo-light { display: inline; }
+.logo-dark { display: none; }
+
+/* When dark theme is active */
+html[data-theme="dark"] .logo-light {
+    display: none;
+}
+html[data-theme="dark"] .logo-dark {
+    display: inline;
+}
