@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Aditya Jagdhane</title>
-    <meta name="description" content="Get in touch with Aditya Jagdhane.">
+    <meta name="description" content="Get in touch with Aditya Jagdhane for inquiries, collaborations, and creative projects.">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
@@ -16,16 +16,24 @@
                 <img src="assets/images/logo.svg" alt="Logo" width="28" height="28">
                 <span>Books | Aditya Jagdhane</span>
             </a>
+
             <button class="hamburger" id="hamburger" aria-label="Menu">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
             </button>
+
             <nav class="nav-links" id="nav-links">
                 <a href="index.html">Home</a>
                 <a href="about.html">About the Author</a>
                 <a href="contact.html" class="active">Contact</a>
+
+                <!-- Theme Toggle -->
                 <div class="theme-toggle" id="theme-toggle" role="button" aria-label="Toggle Dark Mode">
-                    <div class="icon-sun"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></div>
-                    <div class="icon-moon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></div>
+                    <div class="icon-sun">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                    </div>
+                    <div class="icon-moon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                    </div>
                     <div class="theme-toggle-thumb"></div>
                 </div>
             </nav>
@@ -33,49 +41,52 @@
     </header>
 
     <main class="container">
+
+        <!-- Contact Hero -->
         <section class="hero">
             <h1>Contact</h1>
-            <p>Have a question about a book, or want to collaborate? Send me a message below.</p>
         </section>
 
-        <div class="contact-form">
-            <!-- Netlify Form Handling -->
-            <form name="contact" method="POST" data-netlify="true">
-                <input type="hidden" name="form-name" value="contact">
-                
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" class="form-control" required>
-                </div>
+        <!-- Contact Content -->
+        <div class="contact-content" style="max-width: 750px; margin: auto; line-height: 1.8;">
 
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" class="form-control" required>
-                </div>
+            <p>If you’d like to get in touch regarding my books, creative projects, collaborations, or general inquiries, I’m always open to hearing from you.</p>
 
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" class="form-control" required></textarea>
-                </div>
+            <p>You can reach me directly through my official contact form:</p>
 
-                <button type="submit" class="btn">Send Message</button>
-            </form>
+            <p><strong>Contact Form:</strong><br>
+                <a href="https://www.adityajagdhane.in/contact" target="_blank">
+                    https://www.adityajagdhane.in/contact
+                </a>
+            </p>
 
-            <div style="margin-top: 3rem; text-align: center; color: var(--text-muted);">
-                <p>Or email me directly at: <a href="mailto:hello@example.com" style="color: var(--primary); font-weight: 500;">hello@example.com</a></p>
-            </div>
+            <p>Please include your name, email, and a short message, and I’ll get back to you as soon as possible.</p>
+
+            <h3>Connect With Me</h3>
+
+            <ul style="list-style: disc; padding-left: 1.5rem; color: var(--text-muted); line-height: 1.8;">
+                <li><a href="https://www.adityajagdhane.in" target="_blank">Official Website</a></li>
+                <li><a href="https://www.linkedin.com/in/aditya-jagdhane/" target="_blank">LinkedIn</a></li>
+                <li><a href="https://www.imdb.com/name/nm16380921/" target="_blank">IMDb Profile</a></li>
+            </ul>
+
+            <p>Thank you for your interest in my work.</p>
         </div>
+
     </main>
 
+    <!-- Footer -->
     <footer>
         <div class="container">
             <p>&copy; 2025 – Books | Aditya Jagdhane. All rights reserved.</p>
+
             <div class="social-links">
                 <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
                 <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg></a>
                 <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg></a>
                 <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
             </div>
+
             <div style="margin-top: 1.5rem; font-size: 0.85rem;">
                 <a href="privacy.html" style="color: var(--text-light);">Privacy Policy</a>
             </div>
