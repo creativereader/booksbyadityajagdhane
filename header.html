@@ -1,22 +1,30 @@
 <header>
     <div class="container nav-container">
         <a href="index.html" class="logo">
-            <img src="assets/images/logo-light.png" class="logo-light" width="28">
-            <img src="assets/images/logo-dark.png" class="logo-dark" width="28">
+            <img src="assets/images/logo-light.png" class="logo-light">
+            <img src="assets/images/logo-dark.png" class="logo-dark">
             <span>Books | Aditya Jagdhane</span>
         </a>
 
         <button class="hamburger" id="hamburger" aria-label="Menu">
-            <!-- hamburger icon -->
+            <svg width="24" height="24" stroke="currentColor" fill="none" stroke-width="2">
+                <line x1="4" y1="12" x2="20" y2="12"/>
+                <line x1="4" y1="6" x2="20" y2="6"/>
+                <line x1="4" y1="18" x2="20" y2="18"/>
+            </svg>
         </button>
 
         <nav class="nav-links" id="nav-links">
             <a href="index.html">Home</a>
             <a href="about.html">About the Author</a>
             <a href="contact.html">Contact</a>
-            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="privacy.html">Privacy Policy</a>
 
-            <div class="theme-toggle" id="theme-toggle"></div>
+            <div class="theme-toggle" id="theme-toggle">
+                <div class="icon-sun">☀</div>
+                <div class="icon-moon">🌙</div>
+                <div class="theme-toggle-thumb"></div>
+            </div>
         </nav>
     </div>
 </header>
