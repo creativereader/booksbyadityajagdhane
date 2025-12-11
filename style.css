@@ -1,38 +1,38 @@
 /* ========================================
-   LOGO FIX — BOTH LOGOS SAME POSITION
+   LOGO FIX — ROBUST TOGGLE
 ======================================== */
 
-/* Logo container */
+/* 1. Logo Container
+   Using flexbox ensures the visible image and text 
+   align perfectly without manual margins. 
+*/
 .logo {
     display: flex;
     align-items: center;
-    gap: 10px;
-    position: relative; /* required for overlap */
-    height: 32px;       /* ensures stable height */
+    gap: 12px;           /* Space between icon and text */
+    text-decoration: none;
+    color: inherit;      /* Inherit text color from header */
 }
 
-/* All logo images MUST overlap */
+/* 2. Common Image Styles */
 .logo img {
-    position: absolute;      /* stack perfectly */
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
     width: 28px;
     height: 28px;
     object-fit: contain;
-    margin: 0;
-    padding: 0;
+    display: block;      /* Default display behavior */
 }
 
-/* Default → show ONLY light logo */
-.logo-light { 
-    display: block;
+/* 3. Visibility Logic (The Swap) */
+
+/* DEFAULT (Light Mode): Show Light, Hide Dark */
+.logo-light {
+    display: block !important;
 }
-.logo-dark { 
-    display: none;
+.logo-dark {
+    display: none !important;
 }
 
-/* Dark theme → swap logo visibility */
+/* DARK MODE: Show Dark, Hide Light */
 html[data-theme="dark"] .logo-light {
     display: none !important;
 }
@@ -40,7 +40,9 @@ html[data-theme="dark"] .logo-dark {
     display: block !important;
 }
 
-/* Move text so it does not overlap icon */
+/* 4. Text Styling */
+/* No left-margin needed because Flexbox handles the gap */
 .logo span {
-    margin-left: 38px; /* icon size + spacing */
+    font-weight: 600;    /* Optional: make text pop */
+    white-space: nowrap; /* Prevents text breaking on small screens */
 }
