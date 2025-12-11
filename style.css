@@ -1,48 +1,41 @@
 /* ========================================
-   LOGO FIX — ROBUST TOGGLE
+   LOGO FIX — SINGLE IMAGE SWAP (ROBUST)
 ======================================== */
 
-/* 1. Logo Container
-   Using flexbox ensures the visible image and text 
-   align perfectly without manual margins. 
+/* 1. Logo Container (Flexbox)
+   Flexbox ensures the image and text are perfectly aligned and spaced.
 */
 .logo {
     display: flex;
     align-items: center;
-    gap: 12px;           /* Space between icon and text */
+    gap: 12px;           /* Space between logo and text */
     text-decoration: none;
-    color: inherit;      /* Inherit text color from header */
+    color: inherit;      /* Ensure link color is theme-friendly */
 }
 
-/* 2. Common Image Styles */
-.logo img {
+/* 2. Theme-Dependent Logo Styling */
+.theme-dependent-logo {
     width: 28px;
     height: 28px;
     object-fit: contain;
-    display: block;      /* Default display behavior */
+    display: block;
+    
+    /* DEFAULT (Light Mode): Set the light logo as content */
+    /* IMPORTANT: Adjust the path if necessary! */
+    content: url('../assets/images/logo-light.png'); 
 }
 
-/* 3. Visibility Logic (The Swap) */
-
-/* DEFAULT (Light Mode): Show Light, Hide Dark */
-.logo-light {
-    display: block !important;
-}
-.logo-dark {
-    display: none !important;
-}
-
-/* DARK MODE: Show Dark, Hide Light */
-html[data-theme="dark"] .logo-light {
-    display: none !important;
-}
-html[data-theme="dark"] .logo-dark {
-    display: block !important;
+/* 3. Dark Mode Override 
+   When the dark theme is active, the content property swaps the image source.
+*/
+html[data-theme="dark"] .theme-dependent-logo {
+    /* Set the dark logo as content */
+    /* IMPORTANT: Adjust the path if necessary! */
+    content: url('../assets/images/logo-dark.png');
 }
 
-/* 4. Text Styling */
-/* No left-margin needed because Flexbox handles the gap */
+/* 4. Text Styling (No manual margin needed thanks to Flexbox gap) */
 .logo span {
-    font-weight: 600;    /* Optional: make text pop */
-    white-space: nowrap; /* Prevents text breaking on small screens */
+    font-weight: 600;    
+    white-space: nowrap; 
 }
