@@ -128,6 +128,28 @@ html[data-theme="dark"] .logo-dark {
     padding: 0;
 }
 
+/* Footer container fix */
+footer .container {
+    text-align: center;
+    padding: 1.2rem 0;
+}
+
+/* Main footer line – default size */
+footer p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+/* Second footer line – smaller & tighter */
+footer .footer-credit {
+    margin: 4px 0 0 0;
+    font-size: 0.85rem;
+    opacity: 0.8;
+    line-height: 1.3;
+}
+
+
 
 
 
