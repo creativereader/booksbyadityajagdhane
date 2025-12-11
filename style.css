@@ -1,42 +1,50 @@
-/* ==========================
-   LOGO THEME SWITCHING
-   ========================== */
+/* -------------------------------------------------
+   LOGO VISIBILITY (FINAL FIX)
+-------------------------------------------------- */
 
-/* LIGHT THEME → show light logo */
+/* Show ONLY light logo by default */
 .logo-light { display: inline-block; }
-.logo-dark  { display: none; }
+.logo-dark { display: none; }
 
-/* DARK THEME → show dark logo */
-html[data-theme="dark"] .logo-light { display: none; }
-html[data-theme="dark"] .logo-dark  { display: inline-block; }
+/* When dark theme is active → swap logos */
+html[data-theme="dark"] .logo-light {
+    display: none !important;
+}
+html[data-theme="dark"] .logo-dark {
+    display: inline-block !important;
+}
 
-/* Force consistent logo size & alignment */
+/* Perfect alignment */
 .logo {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
 }
 
 .logo img {
     width: 28px;
     height: 28px;
-    display: block;
     object-fit: contain;
-    padding: 0;
+    display: block;
     margin: 0;
+    padding: 0;
 }
 
-/* ==========================
-   THEME TOGGLE SWITCH
-   ========================== */
+/* -------------------------------------------------
+   THEME TOGGLE FIXED
+-------------------------------------------------- */
 
 .theme-toggle {
-    width: 40px;
+    width: 45px;
     height: 22px;
-    background: var(--toggle-bg, #ddd);
     border-radius: 20px;
+    background: var(--toggle-bg, #ddd);
     position: relative;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4px;
 }
 
 .theme-toggle-thumb {
@@ -45,16 +53,21 @@ html[data-theme="dark"] .logo-dark  { display: inline-block; }
     background: white;
     border-radius: 50%;
     position: absolute;
-    top: 2px;
-    left: 2px;
-    transition: all 0.25s ease;
+    left: 3px;
+    transition: transform 0.25s ease;
 }
 
 html[data-theme="dark"] .theme-toggle-thumb {
-    transform: translateX(18px);
+    transform: translateX(22px);
 }
 
 .icon-sun,
 .icon-moon {
-    display: none; /* we are not using emojis now */
+    font-size: 12px;
+    line-height: 1;
+    z-index: 2;
 }
+
+/* Make icons dim nicely */
+html[data-theme="light"] .icon-moon { opacity: 0.3; }
+html[data-theme="dark"] .icon-sun { opacity: 0.3; }
