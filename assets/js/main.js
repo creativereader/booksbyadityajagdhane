@@ -6,9 +6,8 @@
 
 document.addEventListener("DOMContentLoaded", async () => {
 
-    await loadHeaderFooter();   // << correct function
+    await loadHeaderFooter();   // Header + Footer injected first
 
-    initTheme();
     initMobileMenu();
     initScrollEffects();
 
@@ -22,14 +21,14 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 /* =========================================
    Detect correct path (root OR /books/)
-   ========================================= */
+========================================= */
 function pathPrefix() {
     return location.pathname.includes("/books/") ? "../" : "";
 }
 
 /* =========================================
    Load Header + Footer from external HTML files
-   ========================================= */
+========================================= */
 async function loadHeaderFooter() {
     const prefix = pathPrefix();
 
@@ -37,6 +36,10 @@ async function loadHeaderFooter() {
     try {
         const headerHTML = await fetch(`${prefix}header.html`).then(r => r.text());
         document.body.insertAdjacentHTML("afterbegin", headerHTML);
+
+        // ⭐ IMPORTANT LINE — THEME FIX ⭐
+        initTheme();    
+        
     } catch (e) {
         console.error("Header load failed:", e);
     }
@@ -52,7 +55,7 @@ async function loadHeaderFooter() {
 
 /* =========================================
    THEME TOGGLE
-   ========================================= */
+========================================= */
 function initTheme() {
     const html = document.documentElement;
 
@@ -62,7 +65,7 @@ function initTheme() {
     let theme = saved || (prefersDark ? "dark" : "light");
     html.setAttribute("data-theme", theme);
 
-    // Re-query because header was injected dynamically
+    // dynamic header → event delegation
     document.addEventListener("click", (e) => {
         if (e.target.closest("#theme-toggle")) {
             theme = theme === "light" ? "dark" : "light";
@@ -74,7 +77,7 @@ function initTheme() {
 
 /* =========================================
    MOBILE MENU
-   ========================================= */
+========================================= */
 function initMobileMenu() {
     document.addEventListener("click", e => {
         const burger = document.getElementById("hamburger");
@@ -89,20 +92,19 @@ function initMobileMenu() {
 }
 
 /* =========================================
-   HEADER SHADOW ON SCROLL
-   ========================================= */
+   HEADER SHADOW
+========================================= */
 function initScrollEffects() {
     window.addEventListener("scroll", () => {
         const header = document.querySelector("header");
         if (!header) return;
-
         header.classList.toggle("scrolled", window.scrollY > 10);
     });
 }
 
 /* =========================================
    LOAD BOOKS
-   ========================================= */
+========================================= */
 let allBooks = [];
 
 async function loadBooks() {
@@ -118,7 +120,7 @@ async function loadBooks() {
 
 /* =========================================
    RENDER BOOK CARDS
-   ========================================= */
+========================================= */
 function renderBooks(books) {
     const grid = document.getElementById("book-grid");
     grid.innerHTML = "";
@@ -144,13 +146,14 @@ function renderBooks(books) {
                 <a href="${b.detailPage}" class="btn btn-outline">View Details</a>
             </div>
         `;
+
         grid.appendChild(el);
     });
 }
 
 /* =========================================
-   SEARCH BAR
-   ========================================= */
+   SEARCH
+========================================= */
 function initSearch() {
     const input = document.getElementById("book-search");
     if (!input) return;
