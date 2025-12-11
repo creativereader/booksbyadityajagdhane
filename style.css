@@ -2,17 +2,18 @@
    LOGO FIX — BOTH LOGOS SAME POSITION
 ======================================== */
 
-/* Container should NOT layout images inline */
+/* Logo container */
 .logo {
     display: flex;
     align-items: center;
     gap: 10px;
-    position: relative; /* IMP – allows overlapping icons */
+    position: relative; /* required for overlap */
+    height: 32px;       /* ensures stable height */
 }
 
-/* Logo images must overlap */
+/* All logo images MUST overlap */
 .logo img {
-    position: absolute;      /* stack both icons */
+    position: absolute;      /* stack perfectly */
     left: 0;
     top: 50%;
     transform: translateY(-50%);
@@ -23,11 +24,15 @@
     padding: 0;
 }
 
-/* Light theme → show light logo only */
-.logo-light { display: block; }
-.logo-dark { display: none; }
+/* Default → show ONLY light logo */
+.logo-light { 
+    display: block;
+}
+.logo-dark { 
+    display: none;
+}
 
-/* Dark theme → show dark logo only */
+/* Dark theme → swap logo visibility */
 html[data-theme="dark"] .logo-light {
     display: none !important;
 }
@@ -35,7 +40,7 @@ html[data-theme="dark"] .logo-dark {
     display: block !important;
 }
 
-/* Text needs a bit space because icons overlap */
+/* Move text so it does not overlap icon */
 .logo span {
-    margin-left: 38px; /* icon width + spacing */
+    margin-left: 38px; /* icon size + spacing */
 }
