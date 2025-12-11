@@ -73,26 +73,25 @@ html[data-theme="light"] .icon-moon { opacity: 0.3; }
 html[data-theme="dark"] .icon-sun { opacity: 0.3; }
 
 
-/* Footer main line — normal size */
+/* Footer main line */
 footer p {
     margin: 0;
-    font-size: 1rem;       /* main size */
+    font-size: 1rem;        /* keep default */
     line-height: 1.4;
 }
 
-/* Footer credit — smaller size */
+/* Footer credit line (smaller font) */
 footer .footer-credit {
     margin-top: 4px;
-    font-size: 0.85rem;    /* smaller text */
-    opacity: 0.85;         /* lighter appearance */
+    font-size: 0.85rem;     /* slightly smaller */
+    opacity: 0.85;
     line-height: 1.3;
 }
 
 footer .footer-credit a {
-    font-size: 0.85rem;    /* ensure the link matches */
-    color: var(--text-muted, inherit);
+    color: inherit;
+    text-decoration: underline;
 }
-
 
 
 
