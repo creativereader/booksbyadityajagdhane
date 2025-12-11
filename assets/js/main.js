@@ -4,19 +4,21 @@
  * Handles Theme Toggle, Mobile Menu, Dynamic Grid
  */
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
 
-    loadHeaderFooter().then(() => {
-        initTheme();
-        initMobileMenu();
-        initScrollEffects();
-    });
+    await injectHeader();   // must be awaited
+    await injectFooter();   // must be awaited
 
-    // Load books only on home page
+    initTheme();
+    initMobileMenu();
+    initScrollEffects();
+
+    // Load books only on Home page
     if (document.getElementById("book-grid")) {
         loadBooks();
         initSearch();
     }
+
 });
 
 /* =========================================
