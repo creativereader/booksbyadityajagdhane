@@ -6,8 +6,7 @@
 
 document.addEventListener("DOMContentLoaded", async () => {
 
-    await injectHeader();  
-    await injectFooter();  
+    await loadHeaderFooter();   // << correct function
 
     initTheme();
     initMobileMenu();
@@ -19,7 +18,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         initSearch();
     }
 
-} ); 
+});
 
 /* =========================================
    Detect correct path (root OR /books/)
@@ -55,7 +54,6 @@ async function loadHeaderFooter() {
    THEME TOGGLE
    ========================================= */
 function initTheme() {
-    const toggle = document.getElementById("theme-toggle");
     const html = document.documentElement;
 
     let saved = localStorage.getItem("theme");
@@ -64,25 +62,29 @@ function initTheme() {
     let theme = saved || (prefersDark ? "dark" : "light");
     html.setAttribute("data-theme", theme);
 
-    if (toggle) {
-        toggle.addEventListener("click", () => {
+    // Re-query because header was injected dynamically
+    document.addEventListener("click", (e) => {
+        if (e.target.closest("#theme-toggle")) {
             theme = theme === "light" ? "dark" : "light";
             html.setAttribute("data-theme", theme);
             localStorage.setItem("theme", theme);
-        });
-    }
+        }
+    });
 }
 
 /* =========================================
    MOBILE MENU
    ========================================= */
 function initMobileMenu() {
-    const burger = document.getElementById("hamburger");
-    const nav = document.getElementById("nav-links");
-    if (!burger || !nav) return;
+    document.addEventListener("click", e => {
+        const burger = document.getElementById("hamburger");
+        const nav = document.getElementById("nav-links");
 
-    burger.addEventListener("click", () => {
-        nav.classList.toggle("active");
+        if (!burger || !nav) return;
+
+        if (e.target.closest("#hamburger")) {
+            nav.classList.toggle("active");
+        }
     });
 }
 
@@ -90,10 +92,10 @@ function initMobileMenu() {
    HEADER SHADOW ON SCROLL
    ========================================= */
 function initScrollEffects() {
-    const header = document.querySelector("header");
-    if (!header) return;
-
     window.addEventListener("scroll", () => {
+        const header = document.querySelector("header");
+        if (!header) return;
+
         header.classList.toggle("scrolled", window.scrollY > 10);
     });
 }
