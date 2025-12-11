@@ -6,20 +6,20 @@
 
 document.addEventListener("DOMContentLoaded", async () => {
 
-    await injectHeader();   // must be awaited
-    await injectFooter();   // must be awaited
+    await injectHeader();  
+    await injectFooter();  
 
     initTheme();
     initMobileMenu();
     initScrollEffects();
 
-    // Load books only on Home page
+    // Load books only on home page
     if (document.getElementById("book-grid")) {
         loadBooks();
         initSearch();
     }
 
-});
+} ); 
 
 /* =========================================
    Detect correct path (root OR /books/)
