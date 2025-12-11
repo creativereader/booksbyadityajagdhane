@@ -1,5 +1,7 @@
 /* ========================================
-   LOGO FIX — SINGLE IMAGE SWAP (ROBUST)
+   LOGO FIX — SINGLE IMAGE SWAP (ROBUST FIX)
+   This uses the 'content' property on one image tag to prevent overlap issues.
+   (Light Theme shows Light Logo, Dark Theme shows Dark Logo)
 ======================================== */
 
 /* 1. Logo Container (Flexbox)
@@ -21,7 +23,7 @@
     display: block;
     
     /* DEFAULT (Light Mode): Set the light logo as content */
-    /* IMPORTANT: Adjust the path if necessary! */
+    /* *** CRITICAL: Check and adjust this path if necessary! *** */
     content: url('../assets/images/logo-light.png'); 
 }
 
@@ -30,11 +32,11 @@
 */
 html[data-theme="dark"] .theme-dependent-logo {
     /* Set the dark logo as content */
-    /* IMPORTANT: Adjust the path if necessary! */
+    /* *** CRITICAL: Check and adjust this path if necessary! *** */
     content: url('../assets/images/logo-dark.png');
 }
 
-/* 4. Text Styling (No manual margin needed thanks to Flexbox gap) */
+/* 4. Text Styling */
 .logo span {
     font-weight: 600;    
     white-space: nowrap; 
