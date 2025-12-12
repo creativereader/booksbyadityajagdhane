@@ -21,38 +21,38 @@
     height: 28px;
     object-fit: contain;
     display: block;
-    
+
     /* DEFAULT (Light Mode): Set the light logo as content */
-    /* *** CRITICAL: Check and adjust this path if necessary! *** */
     content: url('../assets/images/logo-light.png'); 
 }
 
-/* 3. Dark Mode Override 
-   When the dark theme is active, the content property swaps the image source.
-*/
+/* 3. Dark Mode Override */
 html[data-theme="dark"] .theme-dependent-logo {
-    /* Set the dark logo as content */
-    /* *** CRITICAL: Check and adjust this path if necessary! *** */
     content: url('../assets/images/logo-dark.png');
 }
 
 /* 4. Text Styling */
 .logo span {
-    font-weight: 600;    
-    white-space: nowrap; 
+    font-weight: 600;
+    white-space: nowrap;
 }
 
-.detail-content {
-    max-width: 700px;
-    margin: 0 auto;
-    text-align: center;
+/* ========================================
+   FIX: Center About-the-Book Content
+======================================== */
+
+/* Force center alignment for About the Book section */
+.book-detail .detail-content {
+    max-width: 700px !important;
+    margin: 0 auto !important;
+    text-align: center !important;
 }
 
-.detail-content ul {
-    list-style-position: inside;
-    padding-left: 0;
-    margin: 1.5rem auto;
-    text-align: left;  /* keeps bullet text readable */
-    max-width: 600px;
+/* Ensure bullets stay readable while centered in layout */
+.book-detail .detail-content ul {
+    list-style-position: inside !important;
+    padding-left: 0 !important;
+    margin: 1.5rem auto !important;
+    max-width: 600px !important;
+    text-align: left !important;
 }
-
