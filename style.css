@@ -41,3 +41,18 @@ html[data-theme="dark"] .theme-dependent-logo {
     font-weight: 600;    
     white-space: nowrap; 
 }
+
+.detail-content {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.detail-content ul {
+    list-style-position: inside;
+    padding-left: 0;
+    margin: 1.5rem auto;
+    text-align: left;  /* keeps bullet text readable */
+    max-width: 600px;
+}
+
