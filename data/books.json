@@ -1,14 +1,12 @@
 [
   {
-    "slug": "the-creative-flow",
-    "title": "The Creative Flow: Mastering Music Production",
-    "shortTitle": "The Creative Flow",
+    "slug": "building-a-life-around-creativity",
+    "title": "Building a Life Around Creativity by Aditya Jagdhane",
+    "shortTitle": "Building a Life Around Creativity",
     "cover": "https://img-wrapper.vercel.app/image?url=https://placehold.co/600x900/252525/FFF?text=The+Creative+Flow",
-    "descriptionShort": "Unlock your potential in the studio with actionable strategies for modern producers.",
-    "tags": ["Music Production", "Creativity"],
-    "detailPage": "books/the-creative-flow.html",
+    "detailPage": "books/building-a-life-around-creativity.html",
     "readLink": "#",
-    "publishedOn": "October 15, 2024"
+    "publishedOn": "December 5, 2025"
   },
   {
     "slug": "licensing-101",
