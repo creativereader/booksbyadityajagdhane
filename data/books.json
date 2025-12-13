@@ -1,21 +1,22 @@
 [
   {
     "slug": "building-a-life-around-creativity",
-    "title": "Building a Life Around Creativity by Aditya Jagdhane",
+    "title": "Building a Life Around Creativity",
     "shortTitle": "Building a Life Around Creativity",
-    "cover": "https://img-wrapper.vercel.app/image?url=https://placehold.co/600x900/252525/FFF?text=The+Creative+Flow",
+    "cover": "/assets/images/Building_A_Life_Around_Creativity.webp",
+    "descriptionShort": "",
     "detailPage": "books/building-a-life-around-creativity.html",
     "readLink": "#",
     "publishedOn": "December 5, 2025"
   },
   {
     "slug": "licensing-101",
-    "title": "Licensing 101: Get Your Music Heard",
-    "shortTitle": "Licensing 101",
-    "cover": "https://img-wrapper.vercel.app/image?url=https://placehold.co/600x900/1e3a8a/FFF?text=Licensing+101",
-    "descriptionShort": "A comprehensive guide to navigating the world of sync licensing and royalties.",
+    "title": "Music Licensing Made Easy (Guide)",
+    "shortTitle": "Music Licensing Made Easy (Guide)",
+    "cover": "/assets/images/Music_Licensing_Made_Easy",
+    "descriptionShort": "",
     "tags": ["Music Business", "Licensing"],
-    "detailPage": "books/licensing-101.html",
+    "detailPage": "books/Music-Licensing-Made-Easy.html",
     "readLink": "#",
     "publishedOn": "January 20, 2024"
   },
