@@ -10,25 +10,23 @@
     "publishedOn": "December 5, 2025"
   },
   {
-    "slug": "licensing-101",
+    "slug": "Music Licensing Made Easy (Guide)",
     "title": "Music Licensing Made Easy (Guide)",
     "shortTitle": "Music Licensing Made Easy (Guide)",
-    "cover": "/assets/images/Music_Licensing_Made_Easy",
+    "cover": "/assets/images/Music_Licensing_Made_Easy.webp",
     "descriptionShort": "",
-    "tags": ["Music Business", "Licensing"],
     "detailPage": "books/Music-Licensing-Made-Easy.html",
     "readLink": "#",
-    "publishedOn": "January 20, 2024"
+    "publishedOn": "October 6, 2025"
   },
   {
-    "slug": "sound-design-secrets",
-    "title": "Sound Design Secrets",
-    "shortTitle": "Sound Design",
-    "cover": "https://img-wrapper.vercel.app/image?url=https://placehold.co/600x900/064e3b/FFF?text=Sound+Design",
-    "descriptionShort": "Craft unique sonic landscapes and define your signature sound.",
-    "tags": ["Sound Design", "Production"],
-    "detailPage": "books/sound-design-secrets.html",
+    "slug": "How to Export High Quality Music (Guide)",
+    "title": "How to Export High Quality Music (Guide)",
+    "shortTitle": "How to Export High Quality Music (Guide)",
+    "cover": "/assets/images/How_to_Export_High_Quality_Music.webp",
+    "descriptionShort": "",
+    "detailPage": "books/how-to-export-high-quality-music.html",
     "readLink": "#",
-    "publishedOn": "March 10, 2023"
+    "publishedOn": "October 4, 2025"
   }
 ]
