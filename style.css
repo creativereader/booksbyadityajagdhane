@@ -17,8 +17,8 @@
     object-fit: contain;
 }
 
-/* FORCE HEADER TITLE COLOR */
 header .logo .site-title {
     color: #FEC107 !important;
 }
+
 
