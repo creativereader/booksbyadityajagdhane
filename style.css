@@ -76,11 +76,11 @@ header {
     display: block;
 }
 
-.site-title {
+/* FORCE header title color */
+header .logo .site-title {
     color: #FEC107;
-    font-weight: 600;
-    white-space: nowrap;
 }
+
 
 /* NAV */
 .nav-links {
@@ -207,4 +207,5 @@ footer {
 footer p {
     font-size: 0.9rem;
 }
+
 
