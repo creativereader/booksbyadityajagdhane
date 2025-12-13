@@ -1,0 +1,46 @@
+<!-- =======================
+                     RELATED BOOKS
+                ======================== -->
+                <div class="related-books">
+                    <h3>You may also like</h3>
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2.5rem; margin-top: 2rem;">
+
+                        <div class="book-card">
+                            <a href="licensing-101.html" class="book-link-wrapper">
+                                <img 
+                                    src="https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://placehold.co/600x900/1e3a8a/FFF?text=Licensing+101" 
+                                    alt="Licensing 101" 
+                                    class="book-cover"
+                                >
+                            </a>
+                            <div style="padding: 1.5rem;">
+                                <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem;">
+                                    <a href="licensing-101.html">Licensing 101</a>
+                                </h4>
+                                <a href="licensing-101.html" style="color: var(--primary); font-size: 0.9rem; font-weight: 600;">View Details &rarr;</a>
+                            </div>
+                        </div>
+
+                        <div class="book-card">
+                            <a href="sound-design-secrets.html" class="book-link-wrapper">
+                                <img 
+                                    src="https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://placehold.co/600x900/064e3b/FFF?text=Sound+Design" 
+                                    alt="Sound Design Secrets" 
+                                    class="book-cover"
+                                >
+                            </a>
+                            <div style="padding: 1.5rem;">
+                                <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem;">
+                                    <a href="sound-design-secrets.html">Sound Design Secrets</a>
+                                </h4>
+                                <a href="sound-design-secrets.html" style="color: var(--primary); font-size: 0.9rem; font-weight: 600;">View Details &rarr;</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div> <!-- end detail-content -->
+
+        </div> <!-- end book-detail wrapper -->
