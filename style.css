@@ -1,5 +1,5 @@
 /* ========================================
-   SINGLE LOGO — WORKS FOR LIGHT & DARK
+   HEADER LOGO + TITLE (FINAL FIX)
 ======================================== */
 
 .logo {
@@ -7,9 +7,9 @@
     align-items: center;
     gap: 12px;
     text-decoration: none;
-    color: inherit;
 }
 
+/* Logo icon */
 .site-logo {
     width: 28px;
     height: 28px;
@@ -17,17 +17,9 @@
     object-fit: contain;
 }
 
-/* Header title color */
-.site-title {
-    color: #FEC107;
+/* FORCE title color (override all header/nav styles) */
+.logo .site-title {
+    color: #FEC107 !important;   /* ✅ THIS fixes your issue */
     font-weight: 600;
     white-space: nowrap;
 }
-
-/* Keep text clean and single-line */
-.logo span {
-    font-weight: 600;
-    white-space: nowrap;
-}
-
-
