@@ -1,12 +1,19 @@
 <header>
     <div class="container nav-container">
 
+        <!-- Logo + Title -->
         <a href="index.html" class="logo">
-            <img class="theme-dependent-logo" src="assets/images/logo-light.png" alt="Books | Aditya Jagdhane Logo">
-            
-            <span>Books | Aditya Jagdhane</span>
+            <img
+                class="theme-dependent-logo"
+                src="assets/images/favicon/favicon.svg"
+                alt="Books | Aditya Jagdhane Logo"
+            >
+
+            <!-- TEXT COLOR FIX -->
+            <span class="site-title">Books | Aditya Jagdhane</span>
         </a>
 
+        <!-- Mobile Hamburger -->
         <button class="hamburger" id="hamburger" aria-label="Menu">
             <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
                 <line x1="4" y1="12" x2="20" y2="12"/>
@@ -15,13 +22,15 @@
             </svg>
         </button>
 
+        <!-- Navigation -->
         <nav class="nav-links" id="nav-links">
             <a href="index.html">Home</a>
             <a href="about.html">About the Author</a>
             <a href="contact.html">Contact</a>
             <a href="privacy-policy.html">Privacy Policy</a>
 
-            <div class="theme-toggle" id="theme-toggle">
+            <!-- Theme Toggle -->
+            <div class="theme-toggle" id="theme-toggle" role="button" aria-label="Toggle theme">
                 <div class="icon-sun">☀️</div>
                 <div class="icon-moon">🌙</div>
                 <div class="theme-toggle-thumb"></div>
