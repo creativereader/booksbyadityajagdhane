@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building a Life Around Creativity</title>
+    <meta name="description" content="Building a Life Around Creativity is a short, reflective book that explores how creativity shapes our thoughts, emotions, habits, and identity.">
+
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+
+    <!-- Main container controlled by your site layout -->
+    <main class="container">
+
+        <!-- NEW WRAPPER (critical for center alignment) -->
+        <div class="book-detail">
+
+            <a href="../index.html" style="display: inline-block; margin-bottom: 2rem; color: var(--text-muted); font-weight: 500;">
+                &larr; Back to all books
+            </a>
+
+            <!-- =======================
+                 BOOK HEADER
+            ======================== -->
+            <div class="detail-header">
+
+                <img 
+                    src="/assets/images/How_to_Export_High_Quality_Music.webp" 
+                    alt="How to Export High-Quality Music" 
+                    class="detail-cover"
+                >
+
+                <div class="detail-info">
+                    <h1>How to Export High-Quality Music (Guide)</h1>
+                    <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
+                        Published: October 4, 2025
+                    </p>
+
+                    <a href="https://drive.google.com/file/d/1uOkMlA9nksSqvTDlJxkRJPi_yMNyrSrQ/view?usp=drive_link" class="btn" style="margin-bottom: 1rem;">
+                        Read
+                    </a>
+                </div>
+            </div>
+
+
+            <!-- =======================
+                 BOOK CONTENT
+            ======================== -->
+            <div class="detail-content">
+                <h2>About the Book</h2>
+
+               <p>Master the art of exporting professional-grade music from FL Studio 20 with this practical guide. Learn how to create crystal-clear audio files that sound great on any platform—from streaming services to radio stations.</p>
+               <p>This eBook covers essential export settings, a step-by-step export process, and common mistakes to avoid.,/p>
+
+                <p><b>Inside, you’ll learn:</b></p>
+
+                <ul>
+                    <li><b>Essential Export Settings:</b> How sample rate, bit depth, file format, and headroom affect sound quality.</li>
+                    <li><b>Step-by-Step Export Process:</b> A clear six-step workflow from export menu to final render.</li>
+                    <li><b>File Format Comparison:</b> Key differences between WAV, MP3, and FLAC.</li>
+                    <li><b>Avoiding Common Mistakes:</b> Prevent clipping, low bitrates, and mismatched sample rates.</li>
+                    <li><b>Pro Tips for Perfect Exports:</b> Expert techniques for referencing, A/B testing, and consistent workflows.</li>
+                </ul>
+
+    </main>
+
+    <!-- HEADER + FOOTER + THEME SCRIPTS -->
+    <script src="../assets/js/main.js"></script>
+
+</body>
+<
