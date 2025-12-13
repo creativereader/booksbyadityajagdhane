@@ -41,7 +41,7 @@ a {
 
 .container {
     max-width: 1200px;
-    padding: 0 1rem;
+    padding: 0 1.25rem;
     margin: 0 auto;
 }
 
@@ -64,7 +64,6 @@ header {
     height: 64px;
 }
 
-/* LOGO */
 .logo {
     display: flex;
     align-items: center;
@@ -77,9 +76,8 @@ header {
     display: block;
 }
 
-/* FORCE TITLE COLOR (FIXED) */
-header .site-title {
-    color: #FEC107 !important;
+.site-title {
+    color: #FEC107;
     font-weight: 600;
     white-space: nowrap;
 }
@@ -101,45 +99,16 @@ header .site-title {
 }
 
 /* =====================================================
-   THEME TOGGLE
-===================================================== */
-
-.theme-toggle {
-    width: 42px;
-    height: 22px;
-    background: var(--border);
-    border-radius: 20px;
-    position: relative;
-    cursor: pointer;
-}
-
-.theme-toggle-thumb {
-    width: 18px;
-    height: 18px;
-    background: var(--bg);
-    border-radius: 50%;
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    transition: transform 0.25s ease;
-}
-
-html[data-theme="dark"] .theme-toggle-thumb {
-    transform: translateX(20px);
-}
-
-/* =====================================================
    HERO
 ===================================================== */
 
 .hero {
     text-align: center;
-    padding: 4rem 1rem 2.5rem;
+    padding: 5rem 1rem 3rem;
 }
 
 .hero h1 {
     font-size: clamp(2rem, 4vw, 3rem);
-    margin-bottom: 0.5rem;
 }
 
 .hero p {
@@ -159,31 +128,25 @@ html[data-theme="dark"] .theme-toggle-thumb {
     border-radius: 999px;
     border: 1px solid var(--border);
     background: var(--card-bg);
-    color: var(--text);
 }
 
 /* =====================================================
-   BOOK GRID (DESKTOP DEFAULT)
+   BOOK GRID (IMPORTANT FIX)
 ===================================================== */
 
-#book-grid {
+.book-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     padding-bottom: 4rem;
 }
 
-/* BOOK CARD */
+/* CARD */
 .book-card {
     background: var(--card-bg);
     border-radius: 16px;
     overflow: hidden;
     border: 1px solid var(--border);
-    transition: transform 0.2s ease;
-}
-
-.book-card:hover {
-    transform: translateY(-4px);
 }
 
 .book-cover {
@@ -197,7 +160,6 @@ html[data-theme="dark"] .theme-toggle-thumb {
 
 .book-content h3 {
     font-size: 1rem;
-    margin-bottom: 0.5rem;
 }
 
 .book-content p {
@@ -215,23 +177,19 @@ html[data-theme="dark"] .theme-toggle-thumb {
 }
 
 /* =====================================================
-   ✅ MOBILE + TABLET FIX (2 BOOKS PER ROW)
+   ✅ MOBILE — 2 BOOKS PER ROW (FINAL FIX)
 ===================================================== */
 
 @media (max-width: 768px) {
-    #book-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    .book-grid {
+        grid-template-columns: repeat(2, 1fr);
         gap: 1.25rem;
     }
 }
 
-/* =====================================================
-   VERY SMALL MOBILE (STILL 2 BOOKS)
-===================================================== */
-
+/* VERY SMALL PHONES */
 @media (max-width: 420px) {
-    #book-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    .book-grid {
         gap: 1rem;
     }
 }
@@ -248,11 +206,4 @@ footer {
 
 footer p {
     font-size: 0.9rem;
-    margin: 0;
-}
-
-.footer-credit {
-    font-size: 0.8rem;
-    opacity: 0.8;
-    margin-top: 4px;
 }
