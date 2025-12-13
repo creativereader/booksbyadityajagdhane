@@ -17,9 +17,8 @@
     object-fit: contain;
 }
 
-/* FORCE title color (override all header/nav styles) */
-.logo .site-title {
-    color: #FEC107 !important;   /* ✅ THIS fixes your issue */
-    font-weight: 600;
-    white-space: nowrap;
+/* FORCE HEADER TITLE COLOR */
+header .logo .site-title {
+    color: #FEC107 !important;
 }
+
