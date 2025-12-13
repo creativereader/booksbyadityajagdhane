@@ -41,7 +41,7 @@ a {
 
 .container {
     max-width: 1200px;
-    padding: 0 1.25rem;
+    padding: 0 1rem;
     margin: 0 auto;
 }
 
@@ -64,6 +64,7 @@ header {
     height: 64px;
 }
 
+/* LOGO */
 .logo {
     display: flex;
     align-items: center;
@@ -76,8 +77,9 @@ header {
     display: block;
 }
 
+/* FORCE TITLE COLOR (FIXED) */
 header .site-title {
-    color: #FEC107;
+    color: #FEC107 !important;
     font-weight: 600;
     white-space: nowrap;
 }
@@ -132,7 +134,7 @@ html[data-theme="dark"] .theme-toggle-thumb {
 
 .hero {
     text-align: center;
-    padding: 5rem 1rem 3rem;
+    padding: 4rem 1rem 2.5rem;
 }
 
 .hero h1 {
@@ -148,16 +150,11 @@ html[data-theme="dark"] .theme-toggle-thumb {
    SEARCH
 ===================================================== */
 
-.search-bar,
-.filter-bar {
-    display: flex;
-    justify-content: center;
-    margin: 2rem 0;
-}
-
 .search-input {
     width: 100%;
     max-width: 420px;
+    margin: 2rem auto;
+    display: block;
     padding: 0.75rem 1rem;
     border-radius: 999px;
     border: 1px solid var(--border);
@@ -166,7 +163,7 @@ html[data-theme="dark"] .theme-toggle-thumb {
 }
 
 /* =====================================================
-   BOOK GRID (DESKTOP)
+   BOOK GRID (DESKTOP DEFAULT)
 ===================================================== */
 
 #book-grid {
@@ -176,6 +173,7 @@ html[data-theme="dark"] .theme-toggle-thumb {
     padding-bottom: 4rem;
 }
 
+/* BOOK CARD */
 .book-card {
     background: var(--card-bg);
     border-radius: 16px;
@@ -190,7 +188,6 @@ html[data-theme="dark"] .theme-toggle-thumb {
 
 .book-cover {
     width: 100%;
-    height: auto;
     display: block;
 }
 
@@ -218,22 +215,23 @@ html[data-theme="dark"] .theme-toggle-thumb {
 }
 
 /* =====================================================
-MOBILE — FORCE 2 BOOKS PER ROW (FIXED)
+   ✅ MOBILE + TABLET FIX (2 BOOKS PER ROW)
 ===================================================== */
 
 @media (max-width: 768px) {
     #book-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
         gap: 1.25rem;
     }
 }
 
 /* =====================================================
-   SMALL MOBILE
+   VERY SMALL MOBILE (STILL 2 BOOKS)
 ===================================================== */
 
 @media (max-width: 420px) {
     #book-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
         gap: 1rem;
     }
 }
