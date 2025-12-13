@@ -1,58 +1,24 @@
 /* ========================================
-   LOGO FIX — SINGLE IMAGE SWAP (ROBUST FIX)
-   This uses the 'content' property on one image tag to prevent overlap issues.
-   (Light Theme shows Light Logo, Dark Theme shows Dark Logo)
+   SINGLE LOGO — WORKS FOR LIGHT & DARK
 ======================================== */
 
-/* 1. Logo Container (Flexbox)
-   Flexbox ensures the image and text are perfectly aligned and spaced.
-*/
 .logo {
     display: flex;
     align-items: center;
-    gap: 12px;           /* Space between logo and text */
+    gap: 12px;
     text-decoration: none;
-    color: inherit;      /* Ensure link color is theme-friendly */
+    color: inherit;
 }
 
-/* 2. Theme-Dependent Logo Styling */
-.theme-dependent-logo {
+.site-logo {
     width: 28px;
     height: 28px;
-    object-fit: contain;
     display: block;
-
-    /* DEFAULT (Light Mode): Set the light logo as content */
-    content: url('../assets/images/logo-light.png'); 
+    object-fit: contain;
 }
 
-/* 3. Dark Mode Override */
-html[data-theme="dark"] .theme-dependent-logo {
-    content: url('../assets/images/logo-dark.png');
-}
-
-/* 4. Text Styling */
+/* Keep text clean and single-line */
 .logo span {
     font-weight: 600;
     white-space: nowrap;
-}
-
-/* ========================================
-   FIX: Center About-the-Book Content
-======================================== */
-
-/* Force center alignment for About the Book section */
-.book-detail .detail-content {
-    max-width: 700px !important;
-    margin: 0 auto !important;
-    text-align: center !important;
-}
-
-/* Ensure bullets stay readable while centered in layout */
-.book-detail .detail-content ul {
-    list-style-position: inside !important;
-    padding-left: 0 !important;
-    margin: 1.5rem auto !important;
-    max-width: 600px !important;
-    text-align: left !important;
 }
