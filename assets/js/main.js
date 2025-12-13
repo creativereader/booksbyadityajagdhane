@@ -1,52 +1,37 @@
 /**
  * Main JavaScript File
  * Loads header.html + footer.html
- * Handles Theme Toggle, Mobile Menu, Dynamic Grid
+ * Handles Theme Toggle, Mobile Menu, Book Grid
  */
 
 document.addEventListener("DOMContentLoaded", async () => {
 
-    await loadHeaderFooter();   // Header + Footer injected first
+    await loadHeaderFooter();
 
+    initTheme();
     initMobileMenu();
     initScrollEffects();
 
-    // Load books only on home page
-    if (document.getElementById("book-grid")) {
+    // ✅ Load books ONLY on homepage
+    if (location.pathname === "/" || location.pathname === "/index.html") {
         loadBooks();
         initSearch();
     }
-
 });
 
 /* =========================================
-   Detect correct path (root OR /books/)
-========================================= */
-function pathPrefix() {
-    return location.pathname.includes("/books/") ? "../" : "";
-}
-
-/* =========================================
-   Load Header + Footer from external HTML files
+   Load Header + Footer
 ========================================= */
 async function loadHeaderFooter() {
-    const prefix = pathPrefix();
-
-    // ----- Load Header -----
     try {
-        const headerHTML = await fetch(`${prefix}header.html`).then(r => r.text());
+        const headerHTML = await fetch("/header.html").then(r => r.text());
         document.body.insertAdjacentHTML("afterbegin", headerHTML);
-
-        // ⭐ IMPORTANT LINE — THEME FIX ⭐
-        initTheme();    
-        
     } catch (e) {
         console.error("Header load failed:", e);
     }
 
-    // ----- Load Footer -----
     try {
-        const footerHTML = await fetch(`${prefix}footer.html`).then(r => r.text());
+        const footerHTML = await fetch("/footer.html").then(r => r.text());
         document.body.insertAdjacentHTML("beforeend", footerHTML);
     } catch (e) {
         console.error("Footer load failed:", e);
@@ -65,7 +50,6 @@ function initTheme() {
     let theme = saved || (prefersDark ? "dark" : "light");
     html.setAttribute("data-theme", theme);
 
-    // dynamic header → event delegation
     document.addEventListener("click", (e) => {
         if (e.target.closest("#theme-toggle")) {
             theme = theme === "light" ? "dark" : "light";
@@ -103,18 +87,21 @@ function initScrollEffects() {
 }
 
 /* =========================================
-   LOAD BOOKS
+   LOAD BOOKS (HOMEPAGE ONLY)
 ========================================= */
 let allBooks = [];
 
 async function loadBooks() {
     try {
-        const res = await fetch("data/books.json");
+        const res = await fetch("/data/books.json");
         allBooks = await res.json();
         renderBooks(allBooks);
     } catch (e) {
-        document.getElementById("book-grid").innerHTML =
-            `<p style="text-align:center">Unable to load books.</p>`;
+        const grid = document.getElementById("book-grid");
+        if (grid) {
+            grid.innerHTML =
+                `<p style="text-align:center">Unable to load books.</p>`;
+        }
     }
 }
 
@@ -123,6 +110,8 @@ async function loadBooks() {
 ========================================= */
 function renderBooks(books) {
     const grid = document.getElementById("book-grid");
+    if (!grid) return;
+
     grid.innerHTML = "";
 
     if (!books.length) {
@@ -152,7 +141,7 @@ function renderBooks(books) {
 }
 
 /* =========================================
-   SEARCH
+   SEARCH (HOMEPAGE ONLY)
 ========================================= */
 function initSearch() {
     const input = document.getElementById("book-search");
