@@ -79,8 +79,8 @@ header {
 }
 
 /* FORCE header title color */
-header .logo .site-title {
-    color: #FEC107 !important;
+header a.logo span.site-title {
+    color: #FEC107;
 }
 
 /* NAV */
@@ -263,4 +263,5 @@ footer p {
     opacity: 0.8;
     margin-top: 4px;
 }
+
 
