@@ -180,6 +180,12 @@ header.scrolled {
     object-fit: contain;
 }
 
+/* FORCE header title color */
+header .logo .site-title {
+    color: #FEC107;
+}
+
+
 .nav-links {
     display: flex;
     gap: 2.5rem;
