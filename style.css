@@ -78,12 +78,9 @@ header {
     display: block;
 }
 
-/* 🔥 THIS FIXES YOUR COLOR ISSUE */
+/* FORCE header title color */
 header .logo .site-title {
     color: #FEC107 !important;
-    font-weight: 700;
-    font-size: 1rem;
-    white-space: nowrap;
 }
 
 /* NAV */
@@ -266,3 +263,4 @@ footer p {
     opacity: 0.8;
     margin-top: 4px;
 }
+
