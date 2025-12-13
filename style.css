@@ -17,8 +17,17 @@
     object-fit: contain;
 }
 
+/* Header title color */
+.site-title {
+    color: #FEC107;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+
 /* Keep text clean and single-line */
 .logo span {
     font-weight: 600;
     white-space: nowrap;
 }
+
